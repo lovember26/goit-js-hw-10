@@ -43,7 +43,7 @@ function createList(name, flags) {
 }
 
 function createCountryCard(country) {
-  const languages = Object.values(country.languages);
+  const languages = Object.values(country.languages).join(', ');
   countryInfo.insertAdjacentHTML(
     'beforeend',
     `<div><img src="${country.flags.svg}" width=30><h2>${country.name.official}<h2><h3>Capital: ${country.capital}<h3><h3>Population: ${country.population}<h3><h3>Languages: ${languages}<h3><div>`
