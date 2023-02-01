@@ -43,6 +43,7 @@ function createList(name, flags) {
 }
 
 function createCountryCard(country) {
+  if (!country) return;
   const languages = Object.values(country.languages).join(', ');
   countryInfo.insertAdjacentHTML(
     'beforeend',
