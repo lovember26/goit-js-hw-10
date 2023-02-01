@@ -14,6 +14,8 @@ function onInputSearch(e) {
 
   countryInfo.innerHTML = '';
   const inputValue = e.target.value.trim();
+
+  if (inputValue === '') return;
   fetchCountries(inputValue).then(data => {
     createMarkUp(data);
   });
